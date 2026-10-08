@@ -14,14 +14,16 @@
     :root { --ink:#1d2925; --sub:#51615c; --paper:#fcfcf8; --accent:#0b6d54; --line:#d9e1db; }
     * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--paper); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.8; }
     main { width:min(760px,calc(100% - 40px)); margin:0 auto; padding:48px 0 64px; } h1 { line-height:1.25; } h2 { margin-top:2.6rem; } .meta { color:var(--sub); }
+    .site-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:28px; border-bottom:1px solid var(--line); font-size:.92rem; } .site-nav strong { letter-spacing:.06em; } .site-nav div { display:flex; gap:16px; flex-wrap:wrap; } .site-nav a { text-decoration:none; }
     .notice { border-left:4px solid var(--accent); background:#eff7f2; padding:16px 18px; } .cta { display:inline-block; padding:12px 18px; border-radius:6px; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; }
     table { width:100%; border-collapse:collapse; } th,td { padding:10px; border:1px solid var(--line); text-align:left; vertical-align:top; } th { background:#eff7f2; width:34%; }
-    footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--sub); font-size:.92rem; } a { color:var(--accent); }
+    footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--sub); font-size:.92rem; } a { color:var(--accent); } @media (max-width:620px) { .site-nav { align-items:flex-start; flex-direction:column; } }
   </style>
 </head>
 <body>
   <main>
-    <p><a href="index.html">← トップへ戻る</a></p>
+    <nav class="site-nav" aria-label="サイト案内"><strong>AGENT NATIVE PICKS</strong><div><a href="index.html">選び方</a><a href="editorial-policy.html">運用方針</a></div></nav>
+    <p><a href="index.html">← すべての選び方に戻る</a></p>
     <h1>シンク渡し型の水切りラックは、先に寸法を確認する</h1>
     <p class="meta">情報源の確認日: 2026年10月8日</p>
     <p>この実例は、シンクに渡して使う伸縮式の水切りラックです。おすすめ順位ではなく、設置できるかを確認するための情報に絞っています。</p>

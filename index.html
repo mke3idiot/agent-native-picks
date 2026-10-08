@@ -15,19 +15,25 @@
     * { box-sizing: border-box; }
     body { margin: 0; color: var(--ink); background: var(--paper); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.8; }
     main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 48px 0 64px; }
-    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .08em; }
+    .site-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:28px; border-bottom:1px solid var(--line); font-size:.92rem; }
+    .site-nav strong { letter-spacing:.06em; } .site-nav div { display:flex; gap:16px; flex-wrap:wrap; } .site-nav a { text-decoration:none; }
+    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: .08em; margin-top:48px; }
     h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.2; margin: .25rem 0 1rem; }
     h2 { margin-top: 3.2rem; font-size: 1.45rem; }
     .notice { border-left: 4px solid var(--accent); background: #eff7f2; padding: 16px 18px; }
     .lead { font-size: 1.12rem; color: var(--sub); }
     ol { padding-left: 1.4rem; }
     li { margin: .75rem 0; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:1.25rem 0 2rem; } .card { border:1px solid var(--line); border-radius:10px; padding:16px; background:#fff; } .card b { display:block; color:var(--accent); margin-bottom:4px; }
+    .article { display:block; border:1px solid var(--line); border-radius:10px; padding:20px; color:inherit; text-decoration:none; background:#fff; } .article:hover { border-color:var(--accent); } .article span { color:var(--accent); font-weight:700; }
+    @media (max-width:620px) { .grid { grid-template-columns:1fr; } .site-nav { align-items:flex-start; flex-direction:column; } }
     footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--sub); font-size: .92rem; }
     a { color: var(--accent); }
   </style>
 </head>
 <body>
   <main>
+    <nav class="site-nav" aria-label="サイト案内"><strong>AGENT NATIVE PICKS</strong><div><a href="#how-to-choose">選び方</a><a href="#examples">実例</a><a href="editorial-policy.html">運用方針</a></div></nav>
     <p class="eyebrow">AGENT NATIVE PICKS</p>
     <h1>選ぶ前に、<br>比べる軸をつくる。</h1>
     <p class="lead">暮らしの道具を、衝動ではなく自分の条件で選ぶための実用ガイドです。販売・決済・発送は行いません。</p>
@@ -37,7 +43,7 @@
       当サイトにはアフィリエイト広告を含む場合があります。リンク経由で購入があった場合、運営者に報酬が発生することがあります。
     </aside>
 
-    <h2>水切り・キッチン収納を選ぶ前の5つの確認点</h2>
+    <h2 id="how-to-choose">水切り・キッチン収納を選ぶ前の5つの確認点</h2>
     <ol>
       <li><strong>置ける寸法を先に測る。</strong> 幅・奥行き・高さだけでなく、蛇口、引き出し、扉の動きも確認します。</li>
       <li><strong>水の逃げ道を考える。</strong> 受け皿の有無、排水の向き、掃除のしやすさを、普段の洗い物の量と合わせて考えます。</li>
@@ -46,9 +52,17 @@
       <li><strong>購入条件は販売元で最終確認する。</strong> 価格、在庫、配送、返品条件、仕様は変動するため、購入前に販売元の表示を確認します。</li>
     </ol>
 
+    <div class="grid" aria-label="選び方の流れ">
+      <div class="card"><b>1. 測る</b>置き場所だけでなく、扉・蛇口・引き出しの動きも確認します。</div>
+      <div class="card"><b>2. 比べる</b>販売元の仕様と、自分の設置条件を分けて照らし合わせます。</div>
+      <div class="card"><b>3. 確認する</b>価格・在庫・配送・返品は、購入直前に販売元で確認します。</div>
+    </div>
+
+    <h2 id="examples">設置寸法から考える実例</h2>
+    <a class="article" href="sink-rack-fit-check.html"><span>実例を読む →</span><br><strong>シンク渡し型の水切りラックは、先に寸法を確認する</strong><br>幅・奥行き・高さから、設置できるかを確認するための最小ガイドです。</a>
+
     <h2>このサイトの方針</h2>
     <p>紹介を行う場合でも、根拠が確認できない性能・価格・在庫・比較優位は記載しません。商品リンクの掲載前に、情報源、広告表示、リンク先の条件を確認します。計測タグ、広告配信タグ、問い合わせフォームは設置しておらず、閲覧者の個人情報は収集しません。</p>
-    <p><a href="sink-rack-fit-check.html">最初の実例：シンク渡し型の水切りラックを、寸法から確認する</a></p>
     <p><a href="editorial-policy.html">編集・広告表示ポリシーを読む</a></p>
 
     <footer>
