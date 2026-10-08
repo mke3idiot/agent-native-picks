@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mke3idiot.github.io/agent-native-picks/sitemap.xml
